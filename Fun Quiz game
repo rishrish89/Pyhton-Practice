@@ -41,7 +41,7 @@ else:
     print("Incorrect!")
 
 answer = input("How many grammys has she won? ")
-if answer == "10" :
+if answer == "12" :
     print("Correct!")
     score += 13
     count += 1
@@ -57,7 +57,7 @@ else:
     print("Incorrect!")
 
 answer = input("How many Albums has Taylor released? ")
-if answer == "9" :
+if answer == "10" :
     print("Correct!")
     score += 13
     count += 1
