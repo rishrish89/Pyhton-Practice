@@ -1,0 +1,21 @@
+def check(k):
+    j = []
+    while k>0:
+        p = k%10
+        if p in j:
+            return False
+        j.append(p)
+        k = k//10
+        
+    return True
+
+n1 = 101
+n2 = 200
+cnt = 0
+for i in range(n1,n2+1):
+    if check(i) == False :
+        continue
+    else:
+        cnt+=1
+
+print(cnt)
