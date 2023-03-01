@@ -1,0 +1,9 @@
+#printint all the substring of a string
+ip = "geeks"
+k  = list(ip)
+print(k)
+for i in range(len(ip)):
+    for j in range(i+1,len(ip)+1):
+        res = ip[i:j]
+        print(res)
+     
