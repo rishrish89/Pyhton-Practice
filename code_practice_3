@@ -1,0 +1,17 @@
+ip = "helly put the glass smoothly and simply"
+st = "ly"
+ip = ip.split()
+print(ip)
+str1 = ""
+s = len(st)
+for i in ip:
+    if i.endswith(st):
+        i = i[:-s]
+        str1 = str1+" "+ i
+        
+    else:
+        str1 = str1+ " "+ i
+        
+str1=str1.lstrip()
+
+print(str1)
