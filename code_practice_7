@@ -1,0 +1,19 @@
+ip = input() # like (butl = True, bea = True, bbutl = Flase ,butlz = False ,tulb = false )checking those incomplete word can help to complete the given word
+k = "beautiful"
+
+ls = ""
+for i in ip:
+    flag = False
+    while len(k)>0 and not flag:
+        if i == k[0]:
+            ls += i
+            flag = True
+            k = k[1:]
+        else:
+            k = k[1:]
+            flag = False
+
+if ip == ls:
+    print("yess")
+else:
+    print("noo")
