@@ -1,0 +1,40 @@
+ip = str(input())
+n = len(ip)
+l1 = [0]*256
+
+for i in ip:
+    l1[ord(i)] += 1
+    
+cnt = 0
+temp =0
+for i in range(256):
+    if l1[i] % 2 ==0:
+        cnt += l1[i]
+    elif l1[i] == 1:
+        temp+=1
+    else:
+        continue
+    
+if cnt == n-1 and temp ==1:
+    print("The given string can be palindrome")
+elif cnt == n and temp ==0:
+    print("The given string can be palindrome")
+else:
+    print("This string is can not be Palindrome")
+
+#######################################_OR_###########################################################
+ip = input()
+ls = []
+for i in range(0,len(ip)):
+    if ip[i] in ls:
+        ls.remove(ip[i])
+    else:
+        ls.append(ip[i])
+        
+        
+if len(ip) %2 == 0 and len(ls) == 0:
+    print("can be palindrome")
+elif len(ip) %2 != 0 and len(ls) == 1:
+    print("can be palindrome")
+else:
+    print("cannot be a palindrome")
