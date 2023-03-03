@@ -1,0 +1,35 @@
+ip = "I love programming very much" 
+# OUTPUT - much very programming love I
+ls = []
+str1 = ""
+for i in ip:
+
+    if i != " ":
+        str1 += i
+    if i == " ":
+        ls.append(str1)
+        str1 = ""
+
+
+ls.append(str1)
+ls = ls[::-1]
+
+str1 = ""
+for i in ls:
+    str1 +=i + " "
+    
+str1.strip()
+print(str1)
+        
+############################################################################################################################################################################
+
+S = "I love programming very much"
+ans = S.split(" ")
+print(ans)
+ans = ans[::-1]
+k=""
+for i in ans:
+    k = k+i+"."
+            
+S= k[:-1]
+print(S)
