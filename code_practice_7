@@ -17,3 +17,43 @@ if ip == ls:
     print("yess")
 else:
     print("noo")
+    
+########################################################################################################################################################
+ip = "beautiful"
+temp = input()
+i = 0
+j = 0
+while i<len(ip) and j < len(temp):
+    if ip[i] == temp[j]:
+        
+        j+=1
+        
+    i+=1
+        
+    if j == len(temp):
+        break
+        
+if  i== len(ip) and j == len(temp):
+    print("True")
+        
+elif  i< len(ip) and j== len(temp):
+    print("Yess")
+else:
+    print("False")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
