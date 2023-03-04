@@ -1,0 +1,8 @@
+import math
+N = input()
+j = 2
+cnt = 0   
+while j<=N:
+cnt+= math.log10(j)
+j +=1
+return int(cnt)+1
