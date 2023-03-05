@@ -1,0 +1,23 @@
+def mean(ls):
+    k = sum(ls)
+    n = len(ls)
+    return k/n
+
+def median(ls):
+    ls = sorted(ls)
+    if len(ls) %2 == 0:
+        n1 =(len(ls)//2)-1
+        n2 = n1+1
+        summ = ls[n1] +ls[n2]
+        return summ//2
+        
+    elif len(ls) %2 != 0:
+        n1 = len(ls) + 1
+        return n1//2
+
+
+ls = [9,2,6,4,64,74]
+print(ls)
+
+print(mean(ls))
+print(median(ls))
