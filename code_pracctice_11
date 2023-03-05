@@ -1,0 +1,18 @@
+ip = int(input())
+ls = []
+maxi = 0
+for i in range(ip):
+    j = int(input())
+    if maxi < j:
+        maxi = j
+        
+    ls.append(j)
+    
+    
+k = 0
+for i in ls:
+    if i < maxi and k< i:
+        k = i
+        
+        
+print("second - ",k)
