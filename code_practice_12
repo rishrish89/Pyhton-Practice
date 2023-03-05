@@ -1,0 +1,25 @@
+def check(ls):
+    for i in range(0,len(ls)-1):
+        if ls[i] < ls[i+1] or ls[i] == ls[i+1]:
+    
+            continue
+        else:
+            return False
+
+    return True
+
+
+
+ip = int(input())
+ls = []
+maxi = 0
+for i in range(ip):
+    ls.append(int(input()))
+        
+    
+print(ls)  
+
+if check(ls) == True:
+    print("sorted")
+else:
+    print("not sorted")
