@@ -1,0 +1,33 @@
+ip = [1, 1, 1, 2, 3, 3, 5, 5, 8, 8, 8, 9, 9, 10]
+di = {}
+cnt = 0
+temp = ip[0]
+for i in ip:
+    if  i == temp:   
+        cnt+=1
+        di[i] = cnt
+        
+    else:
+        cnt = 1
+        temp = i
+        di[i] = cnt
+        
+print(di)
+
+'''
+OUTPUT: 
+Frequency of 1 is: 3
+Frequency of 2 is: 1
+Frequency of 3 is: 2
+Frequency of 5 is: 2
+Frequency of 8 is: 3
+Frequency of 9 is: 2
+Frequency of 10 is: 1
+'''
+
+
+
+
+
+
+
