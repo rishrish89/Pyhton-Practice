@@ -1,0 +1,26 @@
+
+N = 3
+ip = "paradox"
+res= ip[:N-1]
+print(res)
+for i in range(N-1,len(ip)):
+    j = ip[i]
+    k = ord(j) 
+    k = k - ord('a')
+    temp = ord('z') - k
+    
+    #print('ASCII value of {} is {}'.format(i,ord(j)))
+    #print(k)
+    #print(temp)
+    ans = chr(temp)
+    res = res + ans
+    
+    
+print(res)
+
+
+Input : N = 3
+        paradox
+Output : paizwlc
+We mirror characters from position 3 to end.
+
