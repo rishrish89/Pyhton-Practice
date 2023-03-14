@@ -1,0 +1,45 @@
+
+class pairsum:
+    def __init__(self,ls):
+        self.ls = ls
+        
+    def res(self,target):
+        i = 0
+        j = len(self.ls) - 1 
+        self.ls.sort()
+        while i<j:
+            if ls[i]+ ls[j] == target:
+                return (i,j)
+                
+            elif ls[i]+ls[j]< target:
+                i +=1
+                
+            else:
+                j -= 1 
+    
+n = int(input("Enter no of elements in the list: "))
+print("Enter the elements: ")
+ls = []
+for i in range(n):
+    a = int(input())
+    ls.append(a)
+    
+obj1 = pairsum(ls)
+target = int(input("Enter the target value: "))
+print(obj1.res(target))
+
+
+OUTPUT:- 
+Enter no of elements in the list: 5
+Enter the elements: 
+10
+20
+30
+40
+50
+Enter the target value: 50
+(0, 3)
+
+
+
+
