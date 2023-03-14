@@ -1,0 +1,52 @@
+
+ip = "aabbccddeefghi"
+my = {}
+for i in ip:
+    my[i] =0
+    
+for i in ip:
+    my[i] +=1
+    
+print(my)
+
+k = my[ip[0]]
+cnt =0
+cnt1= 0
+for i,j in my.items():
+    if j == k:
+        cnt +=1
+        
+    
+print(cnt)
+length = cnt * k
+print("total length of common elements : ",length)
+temp = len(ip) - length
+print("remaining elements: " ,temp)
+#print(temp - k) 
+if (length == len(ip)):
+    print("Yesssss")
+    
+
+elif temp - k == 1:
+    print("Yesssss")    
+else:
+    print("Noooooo")
+
+       
+       
+OUTPUT:
+{'a': 2, 'b': 2, 'c': 2, 'd': 2, 'e': 2, 'f': 1, 'g': 1, 'h': 1, 'i': 1}
+5
+length of common elements :  10
+remaining elements:  4
+Noooooo
+    
+        
+
+
+
+
+
+
+
+
