@@ -1,0 +1,66 @@
+
+
+class Student:
+    def __init__(self,roll,name,ls):
+        self.roll = roll
+        self.name = name
+        self.ls = ls
+        self.__total = 0
+        self.__prcnt =0
+        self.__grade = ""       
+    def total_marks(self):
+        self.__total = sum(self.ls)
+        
+        
+    
+    def percent(self):
+        prcnt = self.__total//len(self.ls)
+        self.__prcnt = prcnt
+        
+    def findGrade(self):
+        ke = self.__prcnt
+        if ke >=85:
+            self.__grade = "S"
+        elif ke >=75 and ke <85:
+            self.__grade = "A"
+        
+        elif ke >= 65 and ke < 75:
+            self.__grade =  "B"
+            
+        elif ke >= 55 and ke < 65:
+            self.__grade = "C"
+            
+        elif ke >= 50 and ke < 55:
+            self.__grade = "D"
+        else:
+            self.__grade= "F"
+            
+        return self.__grade
+        
+    def displayDetails(self):
+        self.total_marks()
+        
+        self.percent()
+        j = self.findGrade() 
+        print("{} {} {}% {} {}-grade".format(self.roll, self.name , self.__prcnt,self.__total, j))
+        
+    
+roll = int(input("Enter Roll: "))
+name = input("Enter Name: ")
+print("Enter marks of 5 subjects: ")
+k = 1
+ls = []
+while k<=5:
+    p = int(input("subject {}: ".format(k)))
+    ls.append(p)
+    k+=1
+    
+obj1 = Student(roll,name,ls)
+
+print(obj1.displayDetails())
+
+print(obj1.findGrade())
+
+
+
+
