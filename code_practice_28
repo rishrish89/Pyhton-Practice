@@ -1,0 +1,39 @@
+
+def isPrime(k):
+    
+    for i in range(2,(k//2 + 1)):
+        if k%i ==0:
+            return False
+            
+    return True
+        
+def countNumOfPrimes(num):
+    cnt = 0
+    for i in num:
+        if isPrime(i) == True:
+            cnt += 1
+            
+    return cnt
+
+
+if __name__ == '__main__':
+    num = []
+    n = int(input())
+    for i in range(n):
+        num.append(int(input()))
+        
+    print("count of prime number are : ",countNumOfPrimes(num))
+
+
+
+OUTPUT:-
+5
+1
+2
+3
+4
+5
+count of prime number are :  4
+
+
+
