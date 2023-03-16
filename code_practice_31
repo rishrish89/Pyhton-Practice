@@ -1,0 +1,24 @@
+
+#"dream job 100 and 101"
+ip = "This is alpha 5057 and 97 and 1001"
+#"This is alpha 5057 and 97"
+j = ip.split()
+print(j)
+k = []
+for i in j:
+    if i.isdigit() == True:
+        if i.startswith('9'):
+            continue
+        else:
+            k.append(i)
+            
+            
+p = max(k)
+print(p)
+
+
+OUTPUT:-
+['This', 'is', 'alpha', '5057', 'and', '97', 'and', '1001']
+5057
+
+
