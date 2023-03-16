@@ -1,0 +1,28 @@
+
+from itertools import permutations  
+
+ip = "hai"
+
+
+obj = list(permutations(ip))
+ls = []
+for i in obj:
+    p = ""
+    for j in i:
+        p += j
+        
+    ls.append(p)
+    
+    
+print(ls)
+
+
+OUTPUT:-
+['hai', 'hia', 'ahi', 'aih', 'iha', 'iah']
+
+
+
+
+
+
+
