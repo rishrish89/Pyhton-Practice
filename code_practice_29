@@ -1,0 +1,52 @@
+
+def isPrime(k):
+    for i in range(2,(k//2)+1):
+        if k%i == 0:
+            return False
+    
+    return True
+
+def findd(n,m):
+    ls= []
+    for i in range(n,m+1):
+        if isPrime(i) == True:
+            ls.append(i)
+    return ls
+        
+n = int(input())
+m = int(input())
+k = findd(n,m)
+print(k)
+print("length of ls: ",len(k))
+nt =0
+for i in range(0,len(k)):
+    for j in range(i+1,len(k)):
+        if k[j]-k[i] == 6:
+            nt +=1   
+            
+print("no of prime whose diffference is 6 are:  ",nt)
+
+
+101
+500
+<class 'list'>
+[101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499]
+length of ls:  70
+no of prime whose diffference is 6 are:   30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
