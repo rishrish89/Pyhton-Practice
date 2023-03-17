@@ -1,0 +1,23 @@
+
+ip = "Purabi@gmail.com"
+cnt = 0
+
+for i in ip:
+ if i.isupper() == True or i.islower() == True or i.isspace() == True:
+  cnt +=1
+  continue
+ else:
+  print("Not Valid")
+  break
+
+
+if cnt == len(ip):
+ print("length of string is ",len(ip))    
+ print("Valid string")
+  
+
+OUTPUT:-
+
+Not Valid
+
+
