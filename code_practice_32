@@ -1,0 +1,41 @@
+
+
+def permute(ls,temp,k):
+    if k >= len(ls):
+        ls2 = ls.copy()  
+        temp.append(ls2)
+        
+    else:
+        for i in range(k,len(ls)):
+            ls[k],ls[i] = ls[i],ls[k]
+            permute(ls,temp,k+1)
+            ls[k],ls[i] = ls[i],ls[k]
+
+
+n = input()
+ls = list(n)
+temp = []
+ls3 = []
+permute(ls,temp,0)
+print(temp)
+for i in temp:
+    print(i)
+    st = ""
+    for j in i:
+        st += j
+    ls3.append(st)
+    
+print(ls3)
+
+OUTPUT:-
+abc
+[['a', 'b', 'c'], ['a', 'c', 'b'], ['b', 'a', 'c'], ['b', 'c', 'a'], ['c', 'b', 'a'], ['c', 'a', 'b']]
+['a', 'b', 'c']
+['a', 'c', 'b']
+['b', 'a', 'c']
+['b', 'c', 'a']
+['c', 'b', 'a']
+['c', 'a', 'b']
+['abc', 'acb', 'bac', 'bca', 'cba', 'cab']
+
+
