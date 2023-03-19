@@ -1,0 +1,56 @@
+class checkValid:
+    def __init__(self,ls):
+        self.ls = ls
+        self.__cnt = 0
+        self.cnt1 = 0
+    def isValid(self,k):
+        self.__cnt = 0
+        for i in k:
+            if i.islower() or i.isupper() or i.isspace():
+                self.__cnt += 1
+                continue
+            else:
+                return False
+        
+        if self.__cnt == len(k):
+            return True
+        
+    def countValid(self):
+        self.cnt1 = 0
+        for i in self.ls:
+           if self.isValid(i) == True:
+               self.cnt1 += 1
+               
+        print("Count Of Valid Strings= ",self.cnt1)
+        print("Count Of inValid Strings= ",len(ls) - self.cnt1)
+        
+        
+        
+
+t = int(input())
+ls = []
+for i in range(t):
+    k = input()
+    ls.append(k)
+    
+obj1 = checkValid(ls)
+obj1.countValid()
+
+
+
+OUTPUT:-
+
+4
+Hello Good Morning
+abcd1234Fght
+Indira
+progo.i
+['Hello Good Morning', 'abcd1234Fght', 'Indira', 'progo.i']
+Count Of Valid Strings=  2
+Count Of inValid Strings=  2
+
+
+
+
+
+
