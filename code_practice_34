@@ -1,0 +1,35 @@
+
+ip = input()
+
+
+di = {}
+for i in range(5):
+    k = input()
+    di[k] = 0
+    
+print(di)
+ 
+for i in ip.lower():
+    if i in di:
+        di[i] += 1
+    else:
+        continue
+    
+    
+print(di)
+print(sum(di.values()))
+
+    
+OUTPUT:
+
+Interesting
+a
+e
+i
+o
+u
+{'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
+{'a': 0, 'e': 2, 'i': 2, 'o': 0, 'u': 0}
+4
+
+
