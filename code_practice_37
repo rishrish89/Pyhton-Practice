@@ -1,0 +1,27 @@
+
+ip = input()
+
+ls = list(ip)
+di = {}
+for i in ip:
+    di[i] = 0
+    
+for i in ip:
+    di[i] +=1
+
+print(di)
+
+for i,j in di.items():
+    print(i)
+
+
+OUTPUT:
+242648
+{'2': 2, '4': 2, '6': 1, '8': 1}
+2
+4
+6
+8
+
+
+
