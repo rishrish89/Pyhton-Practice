@@ -1,0 +1,21 @@
+
+di = {'beth':37,'zane':32,'john':41,'amy':41,'mike':59,'jane':43}
+print(di)
+ki = list(di.keys())
+ki.sort()
+print("sorted: ",ki)
+dic = {}
+for i in ki:
+    for key,val in di.items():
+        if key == i:
+            dic[key] = val    
+
+print(dic)
+
+OUTPUT:
+
+{'beth': 37, 'zane': 32, 'john': 41, 'amy': 41, 'mike': 59, 'jane': 43}
+sorted:  ['amy', 'beth', 'jane', 'john', 'mike', 'zane']
+{'amy': 41, 'beth': 37, 'jane': 43, 'john': 41, 'mike': 59, 'zane': 32}
+
+
