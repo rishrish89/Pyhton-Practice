@@ -1,0 +1,53 @@
+
+n = int(input())
+ls =[]
+
+for i in range(n):
+    name = input("Enter name: ")
+    roll = input("Enter roll: ")
+    subj_num = int(input("Enter no of subjects: "))
+    ls2 = []
+    for i in range(subj_num):
+        temp = input("enter marks: ")
+        ls2.append(temp)
+        
+    
+    k = (name,roll,ls2)
+    ls.append(k)
+    
+    
+ti = tuple(ls)
+
+print(ti)
+
+OUTPUT:
+
+3
+Enter name: Ash
+Enter roll: 1
+Enter no of subjects: 2
+enter marks: 20
+enter marks: 30
+Enter name: Tom
+Enter roll: 2
+Enter no of subjects: 3
+enter marks: 10
+enter marks: 40
+enter marks: 50
+Enter name: Rishi
+Enter roll: 3
+Enter no of subjects: 2
+enter marks: 20
+enter marks: 60
+(('Ash', '1', ['20', '30']), ('Tom', '2', ['10', '40', '50']), ('Rishi', '3', ['20', '60']))
+
+
+
+
+
+
+
+
+
+
+
