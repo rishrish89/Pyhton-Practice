@@ -1,0 +1,25 @@
+
+di = {'a':100,'b':200,'c':300}
+d2 = {'a':300,'b':200,'d':400}
+d3 = {}
+
+for i in di:
+    if i in d2:
+        d3[i] = di[i] + d2[i]
+        
+    else:
+        d3[i] = di[i]
+        
+
+for i in d2:
+    if i not in di:
+        d3[i] = d2[i]
+        
+print(d3)
+
+OUTPUT:
+{'a': 400, 'b': 400, 'c': 300, 'd': 400}
+
+
+
+
