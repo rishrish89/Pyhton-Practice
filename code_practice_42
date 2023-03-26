@@ -1,0 +1,13 @@
+ip = [3,40,10,50,65]
+ls = []
+for i in ip:
+ if i > min(ip):
+  ls.append(i)
+
+min_second = min(ls)
+print(min_second)
+
+
+
+OUTPUT:
+10
