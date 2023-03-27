@@ -1,0 +1,22 @@
+#TO CONVERT SINGLE DIGIT TO TWO DECIMAL DIGIT 
+
+num = 56.0
+print(format(num,'.2f'))
+
+OUTPUT:
+
+56.00
+
+
+
+#Different ways to take input 
+
+https://forum.freecodecamp.org/t/a-guide-to-the-python-input-function/19192
+
+
+
+
+
+
+
+
