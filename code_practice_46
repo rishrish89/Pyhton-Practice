@@ -1,0 +1,151 @@
+
+class employee:
+    def __init__(self,emp_name,desgn,salary,dict1,status):
+        self.emp_name = emp_name
+        self.desgn  = desgn
+        self.salary = salary
+        self.dict1 = dict1
+        self.status = status
+        self.val = 0
+        
+        
+class organisation(employee):
+    def __init__(self,emp_ls):
+        self.emp_ls = emp_ls
+        
+    def checck(self,thre):
+        
+        for i in self.emp_ls:
+            self.val = list(i.dict1.values())
+            sum1 = sum(self.val)
+            if sum1>= thre:
+                i.status = True
+            elif sum1 < thre:
+                i.status = False
+                
+    def bonuscheck(self,rph):
+        ans = 0
+        for i in self.emp_ls:
+            allval = list(i.dict1.values())
+            if i.status == True:
+                for j in allval:
+                    temp = j*rph
+                    ans += temp
+            
+        return ans
+        
+        
+n = int(input())
+emp_ls = []
+for i in range(n):
+    emp_name = input()
+    desgn = input()
+    salary = int(input())
+    k = int(input())
+    dict1 = {}
+    for i in range(k):
+        key = input()
+        val = int(input())
+        dict1[key] = val
+        status = False
+        
+    obj1 = employee(emp_name,desgn,salary,dict1,status)
+    emp_ls.append(obj1)
+    
+    
+    
+obj2 = organisation(emp_ls)
+thre = int(input())
+rph = int(input())
+obj2.checck(thre)
+ans = obj2.bonuscheck(rph)
+
+for i in emp_ls:
+    name = i.emp_name
+    name = name.capitalize()
+    statu = i.status
+    print(name,statu)
+    
+print(ans)
+
+
+
+
+INPUT:
+5
+sumit
+factly
+23000
+2
+jan
+4
+march
+6
+Arum
+admin
+30000
+3
+feb
+4
+march
+12
+june
+10
+dipak
+admin
+25000
+3
+jan
+12
+july
+5
+aug
+3
+balen
+HR
+12000
+3
+jan
+12
+july
+5
+aug
+3
+Tarun
+HR
+78000
+3
+jan
+12
+july
+5
+aug
+3
+18
+100
+
+OUTPUT:
+Sumit False
+Arum True
+Dipak True
+Balen True
+Tarun True
+8600
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
