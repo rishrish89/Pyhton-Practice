@@ -1,0 +1,35 @@
+
+k = "abcdefghijklmnopqrstuvwxyzoptk"
+n = len(k)
+wi = 4
+loop = n//wi
+t = 0
+for i in range(loop):
+    j = 4
+    while(j>0):
+        print(k[t],end = " ")
+        t +=1
+        j -=1
+    print("\n")
+
+
+while(t<n):
+    
+    print(k[t],end = " ")
+    t+=1
+
+
+a b c d 
+
+e f g h 
+
+i j k l 
+
+m n o p 
+
+q r s t 
+
+u v w x 
+
+y z 
+
