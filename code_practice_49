@@ -1,0 +1,68 @@
+
+
+
+class Dest:
+    def __init__(self,dest_id,dest_name,dest_type):
+        self.dest_id = dest_id
+        self.dest_name = dest_name
+        self.dest_type = dest_type
+        
+class destReview(Dest):
+    def __init__(self,dest_ls):
+        self.dest_ls = dest_ls
+        self.ls1 = []
+        
+    def destFun(self,Type):
+        for i in self.dest_ls:
+            if i.dest_type == Type:
+                self.ls1.append(i)
+                   
+                   
+        def fun(e):
+            return e.dest_id 
+        self.ls1.sort(reverse = True, key=fun)    
+
+
+        for i in self.ls1:
+            print(i.dest_id)
+            print(i.dest_name)
+        
+        return ""
+        
+n = int(input())
+dest_ls = []
+for i in range(n):
+    dest_id = int(input())
+    dest_name = input().lower()
+    dest_type = input().lower()
+    obj1 = Dest(dest_id,dest_name,dest_type)
+    dest_ls.append(obj1)
+    
+    
+    
+obj2 = destReview(dest_ls)
+Type = input().lower()
+print(obj2.destFun(Type))
+
+
+4
+101
+everst
+mountain
+102
+goa
+beach
+10
+jim corbet
+foreset
+104
+mount abu
+mountain
+mountain
+104
+mount abu
+101
+everst
+
+
+
