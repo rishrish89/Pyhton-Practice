@@ -1,0 +1,96 @@
+class Account:
+    def __init__(self,card_num,pin,bal,withdr,acc_type):
+        self.card_num = card_num
+        self.pin = pin
+        self.bal = bal
+        self.withdr = withdr
+        self.acc_type = acc_type
+        
+    def checkbal(self,wi):
+        if wi <= self.bal:
+            new = self.bal - wi
+            self.bal = new
+            self.withdr = wi
+        
+    
+        
+        
+class ATM(Account):
+    def __init__(self,acc_ls):
+        self.acc_ls = acc_ls
+        
+        
+    def check2(self,card2,pin2,withdr2):
+        ct = 0
+        for i in self.acc_ls:
+            if i.card_num == card2 and i.pin == pin2:
+                i.checkbal(withdr2)
+                return print(i.card_num,i.bal,i.withdr)
+            else:
+                ct += 1
+        if ct == len(self.acc_ls):
+            return print("No account Exists")
+        
+    def check3(self,acc_type2):
+        di = {}
+        cnt = 0
+        for i in self.acc_ls:
+            if i.acc_type == acc_type2:
+                di[i.bal] = i.card_num
+            else: 
+                cnt += 1
+            
+        if cnt == len(self.acc_ls):
+            return ""
+        else:
+            return di
+                
+        
+        
+        
+        
+        
+        
+        
+k = int(input())
+acc_ls = []
+for i in range(k):
+    card_num = int(input())
+    pin = int(input())
+    bal = float(input())
+    withdr = float(input())
+    acc_type = input()
+    obj1 = Account(card_num,pin,bal,withdr,acc_type)
+    acc_ls.append(obj1)
+
+
+obj2 = ATM(acc_ls)
+
+card2 = int(input())
+pin2= int(input())
+withdr2 = float(input())
+acc_type2 = input()
+
+obj2.check2(card2,pin2,withdr2)
+
+dic2 = obj2.check3(acc_type2)
+if dic2 == "":
+    print("No  match Found")
+else:
+    ls1 = list(dic2.keys())
+    ls1.sort()
+    dic3 = {}
+    for i in ls1:
+        for i in dic2:
+            dic3[dic2[i]] = i
+            
+    for i,j in dic3.items():
+        print(i,j)
+
+
+
+
+
+
+
+
