@@ -1,0 +1,23 @@
+
+amo = 0
+while True:
+    ip = input()
+    ip = ip.split(" ")
+
+
+    if ip[0] == "D":
+        amo += int(ip[1])
+    
+    elif ip[0] == "W":
+        amo -= int(ip[1])
+    else:
+        break
+
+print(amo)
+
+
+
+
+
+
+
