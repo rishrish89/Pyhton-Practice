@@ -1,0 +1,46 @@
+
+ls = []
+n= 5
+while n>0:
+    ip = input()
+    ip = ip.split(",")
+    ip = tuple(ip)
+    ls.append(ip)
+    n = n-1
+    
+print(ls)
+print("Sorted by Name:--")
+k = sorted(ls)
+print(k)
+
+def mydef(pas):
+    return pas[1]
+    
+ls.sort(reverse = False,key = mydef)
+print("Sorted by Age:--")
+print(ls)
+
+
+def mydef1(pas):
+    return pas[2]
+
+ls.sort(reverse = False,key = mydef1)
+print("Sorted by Score:--")
+print(ls)
+
+
+OUTPUT:--
+Tom,19,80
+John,20,90
+Jony,17,91
+Jony,17,93
+Json,21,85
+[('Tom', '19', '80'), ('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85')]
+Sorted by Name:--
+[('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
+Sorted by Age:--
+[('Jony', '17', '91'), ('Jony', '17', '93'), ('Tom', '19', '80'), ('John', '20', '90'), ('Json', '21', '85')]
+Sorted by Score:--
+[('Tom', '19', '80'), ('Json', '21', '85'), ('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93')]
+
+
